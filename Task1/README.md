@@ -43,11 +43,11 @@ TXT (Text) - typically carries machine-readable data such as opportunistic encry
 Create bash script that interact with mail server via telnet. The script should receive message and recipient as parameters.
 
 3) SUDO: Create script that enables sudo permissions for any user I want. Script should receive username and commands that should be allowed as parameters. Special case ANY - means allow everything.
-- Enable sudo for user comands: iptables, cat, adduser:
+- Enable sudo for user commands: iptables, cat, adduser:
 ```
 vagrant@EPUAKHAWO13DT100:~$ sudo bash enable_sudo.sh user "iptables cat adduser"
 ```
-- Enable sudo for user all comands
+- Enable sudo for user all commands
 ```
 vagrant@EPUAKHAWO13DT100:~$ sudo bash enable_sudo.sh user ANY
 ```
