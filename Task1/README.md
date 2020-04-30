@@ -52,7 +52,9 @@ vagrant@EPUAKHAWO13DT100:~$ sudo bash enable_sudo.sh user "iptables cat adduser"
 vagrant@EPUAKHAWO13DT100:~$ sudo bash enable_sudo.sh user ANY
 ```
 4) ROOT: How to disable switch to root with sudo. I want to disable switch to root with sudo su and similar commands. So all users can run commands only with sudo but can't become root.
-
+```
+vagrant@EPUAKHAWO13DT100:~$ sudo bash disenable_su_root.sh user
+```
 5) MVNSET: I want to have new command in system that allows me to set default version of Maven. Example: mvnset 3.6.1 . If version is missing in system the script should install this version and set as default.
 
 6) LOG: Create additional log that includes average system load. You can save this metric every minute, but fell free if you have own suggestions.
