@@ -41,7 +41,14 @@ TXT (Text) - typically carries machine-readable data such as opportunistic encry
 ```
 2) TELNET: 
 Create bash script that interact with mail server via telnet. The script should receive message and recipient as parameters.
-
+- Enable sudo for user comands: iptables, cat, adduser:
+```
+vagrant@EPUAKHAWO13DT100:~$ sudo bash enable_sudo.sh user "iptables cat adduser"
+```
+- Enable sudo for user all comands
+```
+vagrant@EPUAKHAWO13DT100:~$ sudo bash enable_sudo.sh user ANY
+```
 3) SUDO: Create script that enables sudo permissions for any user I want. Script should receive username and commands that should be allowed as parameters. Special case ANY - means allow everything.
 
 4) ROOT: How to disable switch to root with sudo. I want to disable switch to root with sudo su and similar commands. So all users can run commands only with sudo but can't become root.
