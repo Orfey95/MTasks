@@ -21,11 +21,8 @@ done
 # Convert command string to command array
 full_path_commands_string=$(IFS=','; echo "${full_path_commands_array[*]}")
 
-# Create sudoers file for user
-touch /etc/sudoers.d/$username
-
 # Deny ALL sudo command
-if [ $full_path_commands_string -eq "ANY" ]; then
+if [[ $commands == "ANY" ]]; then
 	echo "$username  ALL=(ALL) ALL" > /etc/sudoers.d/$username
 else
 	echo "$username  ALL=(ALL) $full_path_commands_string" > /etc/sudoers.d/$username
