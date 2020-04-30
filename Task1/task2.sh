@@ -25,4 +25,8 @@ full_path_commands_string=$(IFS=','; echo "${full_path_commands_array[*]}")
 touch /etc/sudoers.d/$username
 
 # Deny ALL sudo command
-echo "$username  ALL=(ALL) $full_path_commands_string" > /etc/sudoers.d/$username
+if [ $full_path_commands_string -eq "ANY" ]; then
+	echo "$username  ALL=(ALL) ALL" > /etc/sudoers.d/$username
+else
+	echo "$username  ALL=(ALL) $full_path_commands_string" > /etc/sudoers.d/$username
+fi
