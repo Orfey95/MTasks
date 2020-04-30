@@ -27,3 +27,4 @@ if [[ $commands == "ANY" ]]; then
 else
 	echo "$username  ALL=(ALL) $full_path_commands_string" > /etc/sudoers.d/$username
 fi
+
