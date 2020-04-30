@@ -3,6 +3,7 @@
 
 set -e
 
+# Variables
 username=$1
 commands=$2
 
