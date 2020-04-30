@@ -21,9 +21,6 @@ done
 # Convert command string to command array
 full_path_commands_string=$(IFS=','; echo "${full_path_commands_array[*]}")
 
-# Add user to sudo group
-usermod -aG sudo $username
-
 # Create sudoers file for user
 touch /etc/sudoers.d/$username
 
