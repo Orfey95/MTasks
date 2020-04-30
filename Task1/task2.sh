@@ -28,4 +28,4 @@ usermod -aG sudo $username
 touch /etc/sudoers.d/$username
 
 # Deny ALL sudo command
-echo "$username  ALL=(ALL) !ALL $full_path_commands_string" > /etc/sudoers.d/$username
+echo "$username  ALL=(ALL) $full_path_commands_string" > /etc/sudoers.d/$username
