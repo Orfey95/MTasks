@@ -1,5 +1,5 @@
-1) DNS:  
-Get all DNS records for domain epam.com. 
+1) DNS:
+- Get all DNS records for domain epam.com. 
 ```
 vagrant@EPUAKHAWO13DT111:~$ dig epam.com any
 
@@ -26,7 +26,7 @@ epam.com.               3600    IN      TXT     "/Kt9hPTHTiW3kgtYuqrF/GT/igWbGBX
 ;; WHEN: Thu Apr 30 08:15:29 UTC 2020
 ;; MSG SIZE  rcvd: 4674
 ```
-Provide short explanation about each type of DNS records you find.
+- Provide short explanation about each type of DNS records you find.
 ```
 A (Address Mapping) - stores a hostname and its corresponding IPv4 address;
 NS (Name Server) - specifies that a DNS Zone, such as "example.com" is delegated to a specific Authoritative Name Server, and provides the address of the name server;
