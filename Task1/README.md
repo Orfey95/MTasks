@@ -58,4 +58,7 @@ vagrant@EPUAKHAWO13DT100:~$ sudo bash disenable_su_root.sh user
 5) MVNSET: I want to have new command in system that allows me to set default version of Maven. Example: mvnset 3.6.1 . If version is missing in system the script should install this version and set as default.
 
 6) LOG: Create additional log that includes average system load. You can save this metric every minute, but fell free if you have own suggestions.
+```
+vagrant@EPUAKHAWO13DT100:~$ echo "*/1 * * * * root uptime > /dev/null 2>&1 >> /var/log/avg_load.log" | sudo tee -a /etc/crontab
+```
 
