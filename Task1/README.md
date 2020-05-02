@@ -51,7 +51,8 @@ vagrant@EPUAKHAWO13DT100:~$ bash telnet_mail.sh mail_server recipient@gmail.com 
 3) SUDO: Create script that enables sudo permissions for any user I want. Script should receive username and commands that should be allowed as parameters. Special case ANY - means allow everything. <br>
 Script parameters:
 - Username. Example: user;
-- Commands. Example: "iptables cat adduser". <br>
+- Commands. Example: "iptables cat adduser". 
+
 Example 1. Enable sudo for user commands: iptables, cat, adduser:
 ```
 vagrant@EPUAKHAWO13DT100:~$ sudo bash enable_sudo.sh user "iptables cat adduser"
