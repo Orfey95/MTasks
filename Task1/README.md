@@ -41,7 +41,9 @@ TXT (Text) - typically carries machine-readable data such as opportunistic encry
 ```
 2) TELNET: 
 Create bash script that interact with mail server via telnet. The script should receive message and recipient as parameters.
-
+```
+vagrant@EPUAKHAWO13DT100:~$ bash telnet_mail.sh mail_server recipient text_mail
+```
 3) SUDO: Create script that enables sudo permissions for any user I want. Script should receive username and commands that should be allowed as parameters. Special case ANY - means allow everything.
 - Enable sudo for user commands: iptables, cat, adduser:
 ```
