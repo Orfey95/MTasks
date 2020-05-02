@@ -40,11 +40,17 @@ MX (Mail exchanger) - specifies an SMTP email server for the domain, used to rou
 TXT (Text) - typically carries machine-readable data such as opportunistic encryption, sender policy framework, etc.
 ```
 2) TELNET: 
-Create bash script that interact with mail server via telnet. The script should receive message and recipient as parameters.
+Create bash script that interact with mail server via telnet. The script should receive message and recipient as parameters. <br>
+Script parameters:
+1. SMTP mail server. Example: mail_server;
+2. Email of recipient. Example: recipient@gmail.com;
+3. Text of email. Example: "Hello world!".
 ```
-vagrant@EPUAKHAWO13DT100:~$ bash telnet_mail.sh mail_server recipient text_mail
+vagrant@EPUAKHAWO13DT100:~$ bash telnet_mail.sh mail_server recipient@gmail.com "Hello world!"
 ```
-3) SUDO: Create script that enables sudo permissions for any user I want. Script should receive username and commands that should be allowed as parameters. Special case ANY - means allow everything.
+3) SUDO: Create script that enables sudo permissions for any user I want. Script should receive username and commands that should be allowed as parameters. Special case ANY - means allow everything. <br>
+Script parameters:
+1.
 - Enable sudo for user commands: iptables, cat, adduser:
 ```
 vagrant@EPUAKHAWO13DT100:~$ sudo bash enable_sudo.sh user "iptables cat adduser"
