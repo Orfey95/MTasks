@@ -53,11 +53,11 @@ Script parameters:
 - Username. Example: user;
 - Commands. Example: "iptables cat adduser". 
 
-Example 1. Enable sudo for user commands: iptables, cat, adduser:
+Example 1. Enable sudo for commands: iptables, cat, adduser:
 ```
 vagrant@EPUAKHAWO13DT100:~$ sudo bash enable_sudo.sh user "iptables cat adduser"
 ```
-Example 2. Enable sudo for user all commands
+Example 2. Enable sudo for all commands
 ```
 vagrant@EPUAKHAWO13DT100:~$ sudo bash enable_sudo.sh user ANY
 ```
