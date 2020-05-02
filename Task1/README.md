@@ -61,4 +61,16 @@ vagrant@EPUAKHAWO13DT100:~$ sudo bash disenable_su_root.sh user
 ```
 vagrant@EPUAKHAWO13DT100:~$ echo "*/1 * * * * root uptime > /dev/null 2>&1 >> /var/log/avg_load.log" | sudo tee -a /etc/crontab
 ```
+Result:
+```
+vagrant@EPUAKHAWO13DT100:~$ cat /var/log/avg_load
+ 13:02:01 up 13 min,  1 user,  load average: 0.01, 0.02, 0.03
+ 13:03:01 up 14 min,  1 user,  load average: 0.00, 0.02, 0.02
+ 13:04:01 up 15 min,  1 user,  load average: 0.00, 0.01, 0.01
+ 13:05:01 up 16 min,  1 user,  load average: 0.00, 0.01, 0.01
+ 13:06:01 up 17 min,  1 user,  load average: 0.00, 0.00, 0.00
+ 13:07:01 up 18 min,  1 user,  load average: 0.00, 0.00, 0.00
+ 13:08:01 up 19 min,  1 user,  load average: 0.00, 0.00, 0.00
+ 13:09:01 up 20 min,  1 user,  load average: 0.00, 0.00, 0.00
+```
 
