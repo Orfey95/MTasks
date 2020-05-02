@@ -42,29 +42,34 @@ TXT (Text) - typically carries machine-readable data such as opportunistic encry
 2) TELNET: 
 Create bash script that interact with mail server via telnet. The script should receive message and recipient as parameters. <br>
 Script parameters:
-1) SMTP mail server. Example: mail_server;
-2) Email of recipient. Example: recipient@gmail.com;
-3) Text of email. Example: "Hello world!".
+- SMTP mail server. Example: mail_server;
+- Email of recipient. Example: recipient@gmail.com;
+- Text of email. Example: "Hello world!".
 ```
 vagrant@EPUAKHAWO13DT100:~$ bash telnet_mail.sh mail_server recipient@gmail.com "Hello world!"
 ```
 3) SUDO: Create script that enables sudo permissions for any user I want. Script should receive username and commands that should be allowed as parameters. Special case ANY - means allow everything. <br>
 Script parameters:
-1.
-- Enable sudo for user commands: iptables, cat, adduser:
+- Username. Example: user;
+- Commands. Example: "iptables cat adduser".
+Example 1. Enable sudo for user commands: iptables, cat, adduser:
 ```
 vagrant@EPUAKHAWO13DT100:~$ sudo bash enable_sudo.sh user "iptables cat adduser"
 ```
-- Enable sudo for user all commands
+Example 2. Enable sudo for user all commands
 ```
 vagrant@EPUAKHAWO13DT100:~$ sudo bash enable_sudo.sh user ANY
 ```
 4) ROOT: How to disable switch to root with sudo. I want to disable switch to root with sudo su and similar commands. So all users can run commands only with sudo but can't become root.
+Script parameters:
+- Username. Example: user.
 ```
 vagrant@EPUAKHAWO13DT100:~$ sudo bash disenable_su_root.sh user
 ```
 5) MVNSET: I want to have new command in system that allows me to set default version of Maven. Example: mvnset 3.6.1 . If version is missing in system the script should install this version and set as default.
+```
 
+```
 6) LOG: Create additional log that includes average system load. You can save this metric every minute, but fell free if you have own suggestions.
 ```
 vagrant@EPUAKHAWO13DT100:~$ echo "*/1 * * * * root uptime > /dev/null 2>&1 >> /var/log/avg_load.log" | sudo tee -a /etc/crontab
