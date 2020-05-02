@@ -42,9 +42,9 @@ TXT (Text) - typically carries machine-readable data such as opportunistic encry
 2) TELNET: 
 Create bash script that interact with mail server via telnet. The script should receive message and recipient as parameters. <br>
 Script parameters:
-1. SMTP mail server. Example: mail_server;
-2. Email of recipient. Example: recipient@gmail.com;
-3. Text of email. Example: "Hello world!".
+1) SMTP mail server. Example: mail_server;
+2) Email of recipient. Example: recipient@gmail.com;
+3) Text of email. Example: "Hello world!".
 ```
 vagrant@EPUAKHAWO13DT100:~$ bash telnet_mail.sh mail_server recipient@gmail.com "Hello world!"
 ```
