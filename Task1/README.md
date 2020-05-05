@@ -75,7 +75,7 @@ vagrant@EPUAKHAWO13DT100:~$ sudo mvnset -m 3.6.1
 ```
 - Get help
 ```
-vagrant@EPUAKHAWO13DT100:~$ sudo mvn_set -h
+vagrant@EPUAKHAWO13DT100:~$ mvnset -h
 
 NAME
                 mvnset - set default maven version
@@ -97,7 +97,7 @@ DESCRIPTION
 ```
 - Get mvnset version
 ```
-vagrant@EPUAKHAWO13DT100:~$ sudo mvn_set -v
+vagrant@EPUAKHAWO13DT100:~$ mvnset -v
 mvnset version 1.0.0
 ```
 6) LOG: Create additional log that includes average system load. You can save this metric every minute, but fell free if you have own suggestions.
