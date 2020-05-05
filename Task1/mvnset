@@ -10,23 +10,23 @@ ANSWER_ERROR=4
 PARAMETERS_ERROR=5
 
 help_manual() {
-echo "
-NAME
-        mvnset - set default maven version
+	echo "
+	NAME
+			mvnset - set default maven version
 
-SYNOPSIS
-        -m, --mvn_version
-                choose Maven version
-        -y, --yes
-                set answer install required version in YES
-        -h, --help
-                get command help
+	SYNOPSIS
+			-m, --mvn_version
+					choose Maven version
+			-y, --yes
+					set answer install required version in YES
+			-h, --help
+					get command help
 
-DESCRIPTION
-        This utility sets the default value of maven.
-        For the changes made by the team to take effect, you must reload the shell 
-        or run the command: source \$HOME/.profile
-"
+	DESCRIPTION
+			This utility sets the default value of maven.
+			For the changes made by the team to take effect, you must reload the shell 
+			or run the command: source \$HOME/.profile
+	"
 }
 
 # Check parameters
@@ -36,8 +36,7 @@ if [ $# -lt 1 ]; then
 fi
 
 # Work with parameters
-while [ -n "$1" ]
-do
+while [ -n "$1" ]; do
 	case "$1" in
 		-y|--yes) choice=Y
 		    shift;;
@@ -53,8 +52,8 @@ do
 done
 
 # Check sudo or root
-if [ "$EUID" -ne 0 ]
-	then echo "This command requires SUDO";
+if [ "$EUID" -ne 0 ]; then 
+	echo "This command requires SUDO";
 	exit $NOT_SUDO;
 fi
 
