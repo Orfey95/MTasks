@@ -15,9 +15,12 @@ NAME
         mvnset - set default maven version
 
 SYNOPSIS
-        mvnset [-m MAVEN VERSION] - choose Maven version
-        mvnset {-y}               - set answer install required version in YES
-        mvnset {-h}               - get command help
+        -m, --mvn_version
+                choose Maven version
+        -y, --yes
+                set answer install required version in YES
+        -h, --help
+                get command help
 
 DESCRIPTION
         This utility sets the default value of maven.
