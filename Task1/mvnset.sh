@@ -36,12 +36,12 @@ fi
 while [ -n "$1" ]
 do
 	case "$1" in
-		-y) choice=Y
+		-y|--yes) choice=Y
 		    shift;;
-		-h) help_manual
+		-h|--help) help_manual
 		    exit 0
 		    shift;;
-		-m) mvn_version=$2
+		-m|--mvn_version) mvn_version=$2
 		    shift;;
 		*)  echo "$1 - no such parameter"
 		    exit $PARAMETERS_ERROR;;
