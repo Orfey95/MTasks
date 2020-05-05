@@ -49,7 +49,6 @@ do
 	shift
 done
 
-
 # Check sudo or root
 if [ "$EUID" -ne 0 ]
 	then echo "This command requires SUDO";
@@ -76,4 +75,3 @@ if ! grep -q "apache-maven" "$HOME"/.profile; then
 else
 	sed -i "s=apache-maven-[0-9.]*=apache-maven-$mvn_version=" "$HOME"/.profile > /dev/null 2>&1
 fi
-
