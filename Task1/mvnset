@@ -11,25 +11,25 @@ ANSWER_ERROR=4
 PARAMETERS_ERROR=5
 
 get_help() {
-	echo "
-	NAME
-			mvnset - set default maven version
+echo "
+NAME
+		mvnset - set default maven version
 
-	SYNOPSIS
-			-m, --mvn_version
-					choose Maven version
-			-y, --yes
-					set answer install required version in YES
-			-h, --help
-					get command help
-			-v, --version
-					get mvnset version
+SYNOPSIS
+		-m, --mvn_version
+				choose Maven version
+		-y, --yes
+				set answer install required version in YES
+		-h, --help
+				get command help
+		-v, --version
+				get mvnset version
 
-	DESCRIPTION
-			This utility sets the default value of maven.
-			For the changes made by the team to take effect, you must reload the shell 
-			or run the command: source \$HOME/.profile
-	"
+DESCRIPTION
+		This utility sets the default value of maven.
+		For the changes made by the team to take effect, you must reload the shell 
+		or run the command: source \$HOME/.profile
+"
 }
 
 get_version(){
@@ -38,7 +38,7 @@ get_version(){
 
 # Check parameters
 if [ $# -lt 1 ]; then
-	echo "You forgot to enter maven version"
+	echo "You forgot to enter maven version. Try -h to get help"
 	exit $VAR_ERROR
 fi
 
