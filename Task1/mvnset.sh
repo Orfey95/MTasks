@@ -37,14 +37,14 @@ while [ -n "$1" ]
 do
 	case "$1" in
 		-y) choice=Y
-		  shift;;
+		    shift;;
 		-h) help_manual
-		  exit 0
-		  shift;;
+		    exit 0
+		    shift;;
 		-m) mvn_version=$2
-		  shift;;
+		    shift;;
 		*)  echo "$1 - no such parameter"
-		  exit $PARAMETERS_ERROR;;
+		    exit $PARAMETERS_ERROR;;
 	esac
 	shift
 done
