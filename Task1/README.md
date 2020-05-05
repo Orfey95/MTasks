@@ -71,7 +71,7 @@ vagrant@EPUAKHAWO13DT100:~$ sudo bash disenable_su_root.sh user
 
 - Install mvnset
 ```
-vagrant@EPUAKHAWO13DT100:~$ curl https://raw.githubusercontent.com/Orfey95/MTasks/master/Task1/mvnset_install.sh | sudo bash
+curl https://raw.githubusercontent.com/Orfey95/MTasks/master/Task1/mvnset_install.sh | sudo bash
 ```
 - Set Maven version
 ```
