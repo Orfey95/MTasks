@@ -68,8 +68,37 @@ Script parameters:
 vagrant@EPUAKHAWO13DT100:~$ sudo bash disenable_su_root.sh user
 ```
 5) MVNSET: I want to have new command in system that allows me to set default version of Maven. Example: mvnset 3.6.1 . If version is missing in system the script should install this version and set as default.
-```
 
+- Set Maven version
+```
+vagrant@EPUAKHAWO13DT100:~$ sudo mvnset -m 3.6.1
+```
+- Get help
+```
+vagrant@EPUAKHAWO13DT100:~$ sudo mvn_set -h
+
+NAME
+                mvnset - set default maven version
+
+SYNOPSIS
+                -m, --mvn_version
+                                choose Maven version
+                -y, --yes
+                                set answer install required version in YES
+                -h, --help
+                                get command help
+                -v, --version
+                                get mvnset version
+
+DESCRIPTION
+                This utility sets the default value of maven.
+                For the changes made by the team to take effect, you must reload the shell
+                or run the command: source $HOME/.profile
+```
+- Get mvnset version
+```
+vagrant@EPUAKHAWO13DT100:~$ sudo mvn_set -v
+mvnset version 1.0.0
 ```
 6) LOG: Create additional log that includes average system load. You can save this metric every minute, but fell free if you have own suggestions.
 ```
