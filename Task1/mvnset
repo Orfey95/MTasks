@@ -2,14 +2,15 @@
 
 set -e
 
-# Variables
+# Exit codes
+SUCCESS=0
 VAR_ERROR=1
 REJECT_INSTALLATION=2
 NOT_SUDO=3
 ANSWER_ERROR=4
 PARAMETERS_ERROR=5
 
-help_manual() {
+get_help() {
 	echo "
 	NAME
 			mvnset - set default maven version
@@ -21,12 +22,18 @@ help_manual() {
 					set answer install required version in YES
 			-h, --help
 					get command help
+			-v, --version
+					get mvnset version
 
 	DESCRIPTION
 			This utility sets the default value of maven.
 			For the changes made by the team to take effect, you must reload the shell 
 			or run the command: source \$HOME/.profile
 	"
+}
+
+get_version(){
+	echo "mvnset version 1.0.0"
 }
 
 # Check parameters
@@ -40,8 +47,11 @@ while [ -n "$1" ]; do
 	case "$1" in
 		-y|--yes) choice=Y
 		    shift;;
-		-h|--help) help_manual
-		    exit 0
+		-h|--help) get_help
+		    exit $SUCCESS
+		    shift;;
+		-v|--version) get_version
+		    exit $SUCCESS
 		    shift;;
 		-m|--mvn_version) mvn_version=$2
 		    shift;;
