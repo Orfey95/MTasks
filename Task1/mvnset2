@@ -1,0 +1,88 @@
+#!/usr/bin/env bash
+
+set -e
+
+# Exit codes
+SUCCESS=0
+VAR_ERROR=1
+REJECT_INSTALLATION=2
+NOT_SUDO=3
+ANSWER_ERROR=4
+PARAMETERS_ERROR=5
+
+get_help() {
+echo "
+NAME
+		mvnset - set default maven version
+
+SYNOPSIS
+		-m, --mvn_version
+				choose Maven version
+		-y, --yes
+				set answer install required version in YES
+		-h, --help
+				get command help
+		-v, --version
+				get mvnset version
+
+DESCRIPTION
+		This utility sets the default value of maven.
+		For the changes made by the team to take effect, you must reload the shell 
+		or run the command: source \$HOME/.profile
+"
+}
+
+get_version(){
+	echo "mvnset version 1.0.0"
+}
+
+# Check parameters
+if [ $# -lt 1 ]; then
+	echo "You forgot to enter maven version. Try -h to get help"
+	exit $VAR_ERROR
+fi
+
+# Work with parameters
+while [ -n "$1" ]; do
+	case "$1" in
+		-y|--yes) choice=Y
+		    shift;;
+		-h|--help) get_help
+		    exit $SUCCESS
+		    shift;;
+		-v|--version) get_version
+		    exit $SUCCESS
+		    shift;;
+		-m|--mvn_version) mvn_version=$2
+		    shift;;
+		*)  echo "$1 - no such parameter"
+		    exit $PARAMETERS_ERROR;;
+	esac
+	shift
+done
+
+# Check sudo or root
+if [ "$EUID" -ne 0 ]; then 
+	echo "This command requires SUDO";
+	exit $NOT_SUDO;
+fi
+
+# Сhecking if the required version is installed
+if [ ! -d /opt/apache-maven-"$mvn_version" ]; then	
+	if [ "$choice" != "Y" ]; then
+		read -r -p "The version of Maven you requested is not installed. Install? Continue (Y/n)? " -e choice
+		case "$choice" in 
+			y|Y|"" ) wget -qO- https://archive.apache.org/dist/maven/maven-3/"$mvn_version"/binaries/apache-maven-"$mvn_version"-bin.tar.gz -P /opt | tar -xvz -C /opt > /dev/null 2>&1;;
+			n|N ) exit $REJECT_INSTALLATION;;
+			* ) echo "Incorrect answer"; exit $ANSWER_ERROR;;
+		esac
+	else
+		wget -qO- https://archive.apache.org/dist/maven/maven-3/"$mvn_version"/binaries/apache-maven-"$mvn_version"-bin.tar.gz -P /opt | tar -xvz -C /opt > /dev/null 2>&1
+	fi
+fi
+
+# Add to alternatives
+update-alternatives --install /usr/bin/mvn mvn /opt/apache-maven-"$mvn_version"/bin/mvn 1
+
+# Choose from alternatives
+update-alternatives --set mvn /opt/apache-maven-"$mvn_version"/bin/mvn
