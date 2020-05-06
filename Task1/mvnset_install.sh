@@ -13,6 +13,7 @@ if [ "$EUID" -ne 0 ]; then
 	exit $NOT_SUDO;
 fi
 
+# For mvnset v1
 if [ "$mvnset_version" -eq 1 ]; then 
 	mvnset_version="";
 fi 
