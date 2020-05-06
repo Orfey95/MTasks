@@ -69,7 +69,7 @@ vagrant@EPUAKHAWO13DT100:~$ sudo bash disenable_su_root.sh user
 ```
 5) MVNSET: I want to have new command in system that allows me to set default version of Maven. Example: mvnset 3.6.1 . If version is missing in system the script should install this version and set as default.
 
-### MVNSET version 1
+### MVNSET version 1 ($PATH)
 
 - Install mvnset version 1
 ```
@@ -106,7 +106,7 @@ DESCRIPTION
 vagrant@EPUAKHAWO13DT100:~$ mvnset -v
 mvnset version 1.0.0
 ```
-### MVNSET version 2
+### MVNSET version 2 (update-alternatives)
 
 - Install mvnset version 2
 ```
