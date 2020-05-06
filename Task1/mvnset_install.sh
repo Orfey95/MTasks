@@ -19,7 +19,7 @@ if [ "$mvnset_version" -eq 1 ]; then
 fi 
 
 # Download mvnset to /usr/bin/
-wget -qO- https://raw.githubusercontent.com/Orfey95/MTasks/master/Task1/mvnset"$mvnset_version" -P /usr/bin/
+wget -qN https://raw.githubusercontent.com/Orfey95/MTasks/master/Task1/mvnset"$mvnset_version" -P /usr/bin/
 
 # Do mvnset executable
 chmod +x /usr/bin/mvnset"$mvnset_version"
