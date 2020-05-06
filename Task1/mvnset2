@@ -43,14 +43,11 @@ fi
 # Work with parameters
 while [ -n "$1" ]; do
 	case "$1" in
-		-y|--yes) choice=Y
-		    shift;;
+		-y|--yes) choice=Y;;
 		-h|--help) get_help
-		    exit $SUCCESS
-		    shift;;
+		    exit $SUCCESS;;
 		-v|--version) get_version
-		    exit $SUCCESS
-		    shift;;
+		    exit $SUCCESS;;
 		-m|--mvn_version) mvn_version=$2
 		    shift;;
 		*)  echo "$1 - no such parameter"
