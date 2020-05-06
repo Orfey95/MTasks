@@ -79,6 +79,10 @@ curl https://raw.githubusercontent.com/Orfey95/MTasks/master/Task1/mvnset_instal
 ```
 vagrant@EPUAKHAWO13DT100:~$ sudo mvnset -m 3.6.1
 ```
+- Set Maven version and skip answer
+```
+vagrant@EPUAKHAWO13DT100:~$ sudo mvnset -m 3.6.1 -y
+```
 - Get help
 ```
 vagrant@EPUAKHAWO13DT100:~$ mvnset -h
@@ -115,6 +119,10 @@ curl https://raw.githubusercontent.com/Orfey95/MTasks/master/Task1/mvnset_instal
 - Set Maven version
 ```
 vagrant@EPUAKHAWO13DT100:~$ sudo mvnset2 -m 3.6.1
+```
+- Set Maven version and skip answer
+```
+vagrant@EPUAKHAWO13DT100:~$ sudo mvnset2 -m 3.6.1 -y
 ```
 - Get help
 ```
