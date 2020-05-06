@@ -14,7 +14,7 @@ if [ "$EUID" -ne 0 ]; then
 fi
 
 if [ "$mvnset_version" -eq 1 ]; then 
-	$mvnset_version = "";
+	mvnset_version="";
 fi 
 
 # Download mvnset to /usr/bin/
