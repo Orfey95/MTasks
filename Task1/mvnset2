@@ -80,7 +80,7 @@ if [ ! -d /opt/apache-maven-"$mvn_version" ]; then
 fi
 
 # Add to alternatives
-update-alternatives --install /usr/bin/mvn mvn /opt/apache-maven-"$mvn_version"/bin/mvn 1
+update-alternatives --install /usr/bin/mvn mvn /opt/apache-maven-"$mvn_version"/bin/mvn 1 > /dev/null 2>&1
 
 # Choose from alternatives
-update-alternatives --set mvn /opt/apache-maven-"$mvn_version"/bin/mvn
+update-alternatives --set mvn /opt/apache-maven-"$mvn_version"/bin/mvn > /dev/null 2>&1
