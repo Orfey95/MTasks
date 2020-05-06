@@ -27,13 +27,11 @@ SYNOPSIS
 
 DESCRIPTION
 		This utility sets the default value of maven.
-		For the changes made by the team to take effect, you must reload the shell 
-		or run the command: source \$HOME/.profile
 "
 }
 
 get_version(){
-	echo "mvnset version 1.0.0"
+	echo "mvnset version 2.0.0"
 }
 
 # Check parameters
